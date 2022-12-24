@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Star Wars Wiki</string>
+    <string name="info">información</string>
+    <string name="character">personajes</string>
+    <string name="version">v 1.0</string>
+    <string name="movies">películas</string>
+    <string name="planet">planeta</string>
+    <string name="rotationpText">periodo de rotación</string>
+    <string name="poputation">cantidad de habitantes</string>
+    <string name="toMovie">apariciones en películas</string>
+    <string name="climate">clima</string>
+    <string name="diameter">diámetro</string>
+    <string name="operiod">periodo orbital</string>
+    <string name="terrain">terreno</string>
+    <string name="nombre">nombre</string>
+    <string name="altura">altura</string>
+    <string name="g_nero">género</string>
+    <string name="birthyear">año de nacimiento</string>
+    <string name="name_movie">nombre pelicula</string>
+</resources>
