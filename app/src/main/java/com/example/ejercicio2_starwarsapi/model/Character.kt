@@ -3,6 +3,11 @@ package com.example.ejercicio2_starwarsapi.model
 import com.google.gson.annotations.SerializedName
 
 data class Character(
+    @SerializedName("results")
+    var results: ArrayList<Results> = arrayListOf()
+)
+
+data class Results (
     var id: String? = null,
     var name: String? = null,
     var height: String? = null,

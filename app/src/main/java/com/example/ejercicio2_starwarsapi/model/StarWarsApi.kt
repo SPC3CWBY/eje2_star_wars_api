@@ -12,7 +12,7 @@ interface StarWarsApi {
     @GET
     fun getCharacters(
         @Url url: String?
-    ): Call<ArrayList<Character>>
+    ): Call<Character>
 
     @GET("planets/{id}/")
     fun getInfoCharacter(
