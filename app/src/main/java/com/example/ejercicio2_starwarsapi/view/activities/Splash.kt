@@ -1,4 +1,4 @@
-package com.example.ejercicio2_starwarsapi
+package com.example.ejercicio2_starwarsapi.view.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

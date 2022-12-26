@@ -1,7 +1,8 @@
-package com.example.ejercicio2_starwarsapi
+package com.example.ejercicio2_starwarsapi.view.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.ejercicio2_starwarsapi.R
 
 class list_movie : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
