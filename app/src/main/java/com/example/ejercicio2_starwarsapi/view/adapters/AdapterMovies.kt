@@ -22,7 +22,7 @@ class AdapterMovies(private val context: Context, val movie: Movies): BaseAdapte
                 binding.tvNameMovie.text = movie.results[p0].nameMovie
                 // IMG
                 Glide.with(context)
-                        .load(movie.results[p0].id)
+                        .load(movie.results[p0].image)
                         .into(binding.ivMovie)
 
                 return binding.root

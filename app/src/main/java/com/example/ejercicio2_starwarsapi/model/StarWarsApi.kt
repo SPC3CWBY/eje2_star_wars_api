@@ -30,10 +30,5 @@ interface StarWarsApi {
         @Url url: String?
     ): Call<CharacterImg>
 
-    //aulavirtual.amaurypm.com API
-    @GET("{id}")
-    fun getMovieImg(
-        @Path("id") id: String?
-    ): Call<Movies>
 }
 

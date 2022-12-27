@@ -10,6 +10,7 @@ data class Movies(
 data class Movie (
     @SerializedName("episode_id")
     var id: Long? = null,
+    @SerializedName("title")
     var nameMovie: String? = null,
     var image: String? = null
 )
