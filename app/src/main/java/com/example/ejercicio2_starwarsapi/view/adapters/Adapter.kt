@@ -37,9 +37,9 @@ class Adapter(private val context: Context,
             .load(games[position].thumbnail)
             .into(holder.ivThumbnail)
 */
-        /*holder.itemView.setOnClickListener {
+        holder.itemView.setOnClickListener {
             if(context is MainActivity) context.selectedCharacter(character.results[position])
-        }*/
+        }
     }
 
     override fun getItemCount(): Int = character.results.size

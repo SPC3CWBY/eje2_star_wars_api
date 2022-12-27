@@ -14,15 +14,15 @@ interface StarWarsApi {
         @Url url: String?
     ): Call<Character>
 
-    @GET("planets/{id}/")
+    @GET("planets/{id}")
     fun getInfoCharacter(
         @Path("id") id: String?
     ): Call<InfoCharacter>
 
-    @GET("films/{id}/")
+    @GET
     fun getMovies(
-        @Path("id") id: String?
-    ): Call<ArrayList<Movies>>
+        @Url url: String?
+    ): Call<Movies>
 
     // akabab.github.io API
     @GET()

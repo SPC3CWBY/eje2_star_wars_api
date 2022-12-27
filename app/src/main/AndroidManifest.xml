@@ -39,6 +39,7 @@
         <activity
             android:name=".view.activities.InfoPersonaje"
             android:exported="false">
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

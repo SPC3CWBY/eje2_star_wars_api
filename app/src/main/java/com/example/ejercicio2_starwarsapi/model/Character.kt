@@ -1,12 +1,14 @@
 package com.example.ejercicio2_starwarsapi.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
 data class Character(
     @SerializedName("results")
     var results: ArrayList<Results> = arrayListOf()
 )
-
+@Parcelize
 data class Results (
     var id: String? = null,
     var name: String? = null,
@@ -17,4 +19,4 @@ data class Results (
     var homeworld: String? = null,
     var image: String? = null,
     var films: ArrayList<String> = arrayListOf()
-)
+): Parcelable

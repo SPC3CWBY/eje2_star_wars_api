@@ -89,6 +89,7 @@
         android:layout_marginTop="64dp"
         android:fontFamily="@font/starjedi"
         android:gravity="center_horizontal"
+        android:onClick="OnClick"
         android:text="@string/toMovie"
         android:textColor="@color/yellow"
         android:textSize="@dimen/textInfo"

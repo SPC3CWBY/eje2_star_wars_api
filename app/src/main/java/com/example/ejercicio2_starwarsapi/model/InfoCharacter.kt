@@ -3,6 +3,7 @@ package com.example.ejercicio2_starwarsapi.model
 import com.google.gson.annotations.SerializedName
 
 data class InfoCharacter(
+    @SerializedName("name")
     var namePlanet: String? = null,
     @SerializedName("rotation_period")
     var rPeriod: String? = null,

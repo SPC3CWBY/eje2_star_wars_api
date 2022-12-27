@@ -1,4 +1,4 @@
-package com.example.ejercicio2_starwarsapi.util
+package com.example.ejercicio2_starwarsapi.view.util
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
