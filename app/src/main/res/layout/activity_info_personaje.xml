@@ -139,7 +139,7 @@
         app:layout_constraintEnd_toStartOf="@+id/tv_planet"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfoClimate" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_climate" />
 
     <TextView
         android:id="@+id/tvInfoPopulation"
@@ -154,7 +154,7 @@
         app:layout_constraintEnd_toStartOf="@+id/tv_planet"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfoTerrain" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_terrain" />
 
     <TextView
         android:id="@+id/tv_rperiod"
@@ -190,17 +190,19 @@
         android:id="@+id/tv_toMovies"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/starjedi"
         android:gravity="center_horizontal"
         android:onClick="OnClick"
         android:text="@string/toMovie"
         android:textColor="@color/yellow"
-        android:textSize="@dimen/textInfo"
+        android:textSize="@dimen/mainText"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfoPopulation"
+        app:layout_constraintTop_toBottomOf="@+id/tv_population"
+        app:layout_constraintVertical_bias="0.333"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
@@ -268,6 +270,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="258dp" />
+        app:layout_constraintGuide_begin="252dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
