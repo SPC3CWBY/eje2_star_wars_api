@@ -24,8 +24,6 @@ class Adapter(private val context: Context, val character: Character): BaseAdapt
             tvAltura.text = character.results[p0].height
             tvBirthyear.text = character.results[p0].birthYear
             tvGenre.text = character.results[p0].gender
-
-            // IMG
         }
         return binding.root
     }

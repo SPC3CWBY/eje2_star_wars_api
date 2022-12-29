@@ -9,7 +9,6 @@ import android.view.View
 import android.widget.Toast
 import com.example.ejercicio2_starwarsapi.databinding.ActivityMainBinding
 import com.example.ejercicio2_starwarsapi.model.Character
-import com.example.ejercicio2_starwarsapi.model.CharacterImg
 import com.example.ejercicio2_starwarsapi.model.Results
 import com.example.ejercicio2_starwarsapi.model.StarWarsApi
 import com.example.ejercicio2_starwarsapi.view.util.Constants
@@ -33,10 +32,6 @@ class MainActivity : AppCompatActivity() {
             .create(StarWarsApi::class.java)
             .getCharacters("people/")
         Log.d(Constants.LOGTAG, "Request: ${callCharacter.request()}")
-
-        val callCharacterImage = Constants.getRetrofitImgCharacter()
-            .create(StarWarsApi::class.java)
-            .getCharacterImg("all")
 
         CoroutineScope(Dispatchers.IO).launch {
             callCharacter.enqueue(object : Callback<Character>{
@@ -70,19 +65,6 @@ class MainActivity : AppCompatActivity() {
                         "Error de conexión: ${t.message}",
                         Toast.LENGTH_SHORT
                     ).show()
-                }
-            })
-
-            callCharacterImage.enqueue(object: Callback<CharacterImg>{
-                override fun onResponse(
-                    call: Call<CharacterImg>,
-                    response: Response<CharacterImg>
-                ) {
-                    TODO("Not yet implemented")
-                }
-
-                override fun onFailure(call: Call<CharacterImg>, t: Throwable) {
-                    TODO("Not yet implemented")
                 }
             })
         }

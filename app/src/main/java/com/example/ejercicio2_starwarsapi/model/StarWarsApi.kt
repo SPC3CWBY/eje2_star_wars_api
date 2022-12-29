@@ -23,12 +23,5 @@ interface StarWarsApi {
     fun getMovies(
         @Url url: String?
     ): Call<Movies>
-
-    // akabab.github.io API
-    @GET()
-    fun getCharacterImg(
-        @Url url: String?
-    ): Call<CharacterImg>
-
 }
 
