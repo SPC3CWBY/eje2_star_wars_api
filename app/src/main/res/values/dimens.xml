@@ -3,5 +3,5 @@
     <dimen name="mainText">24sp</dimen>
     <dimen name="textVersion">16sp</dimen>
     <dimen name="tvInfo">24dp</dimen>
-    <dimen name="textInfo">22sp</dimen>
+    <dimen name="textInfo">19sp</dimen>
 </resources>

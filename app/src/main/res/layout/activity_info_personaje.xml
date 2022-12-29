@@ -44,13 +44,117 @@
         android:layout_marginTop="72dp"
         android:fontFamily="@font/starjedi"
         android:gravity="center_horizontal"
-        android:text="@string/planet"
+        tools:text="@string/answer"
         android:textColor="@color/white"
         android:textSize="@dimen/textInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/gl_2" />
+
+    <TextView
+        android:id="@+id/tvInfoPlanet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/starjedi"
+        android:gravity="center_horizontal"
+        android:text="@string/planet"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/textInfo"
+        app:layout_constraintEnd_toStartOf="@+id/tv_planet"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/gl_2" />
+
+    <TextView
+        android:id="@+id/tvInfoRPeriod"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tvInfo"
+        android:fontFamily="@font/starjedi"
+        android:gravity="center_horizontal"
+        android:text="@string/rotationpText"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/textInfo"
+        app:layout_constraintEnd_toStartOf="@+id/tv_planet"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoPlanet" />
+
+    <TextView
+        android:id="@+id/tvInfoOPeriod"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tvInfo"
+        android:fontFamily="@font/starjedi"
+        android:gravity="center_horizontal"
+        android:text="@string/operiod"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/textInfo"
+        app:layout_constraintEnd_toStartOf="@+id/tv_planet"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoRPeriod" />
+
+    <TextView
+        android:id="@+id/tvInfoDiameter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tvInfo"
+        android:fontFamily="@font/starjedi"
+        android:gravity="center_horizontal"
+        android:text="@string/diameter"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/textInfo"
+        app:layout_constraintEnd_toStartOf="@+id/tv_planet"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoOPeriod" />
+
+    <TextView
+        android:id="@+id/tvInfoClimate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tvInfo"
+        android:fontFamily="@font/starjedi"
+        android:gravity="center_horizontal"
+        android:text="@string/climate"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/textInfo"
+        app:layout_constraintEnd_toStartOf="@+id/tv_planet"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoDiameter" />
+
+    <TextView
+        android:id="@+id/tvInfoTerrain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tvInfo"
+        android:fontFamily="@font/starjedi"
+        android:gravity="center_horizontal"
+        android:text="@string/terrain"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/textInfo"
+        app:layout_constraintEnd_toStartOf="@+id/tv_planet"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoClimate" />
+
+    <TextView
+        android:id="@+id/tvInfoPopulation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tvInfo"
+        android:fontFamily="@font/starjedi"
+        android:gravity="center_horizontal"
+        android:text="@string/poputation"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/textInfo"
+        app:layout_constraintEnd_toStartOf="@+id/tv_planet"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoTerrain" />
 
     <TextView
         android:id="@+id/tv_rperiod"
@@ -59,13 +163,13 @@
         android:layout_marginTop="@dimen/tvInfo"
         android:fontFamily="@font/starjedi"
         android:gravity="center_horizontal"
-        android:text="@string/rotationpText"
         android:textColor="@color/white"
         android:textSize="@dimen/textInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_planet" />
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_planet"
+        tools:text="@string/answer" />
 
     <TextView
         android:id="@+id/tv_population"
@@ -74,12 +178,12 @@
         android:layout_marginTop="@dimen/tvInfo"
         android:fontFamily="@font/starjedi"
         android:gravity="center_horizontal"
-        android:text="@string/poputation"
+        tools:text="@string/answer"
         android:textColor="@color/white"
         android:textSize="@dimen/textInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/tv_terrain" />
 
     <TextView
@@ -96,7 +200,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_population" />
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoPopulation"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/tv_climate"
@@ -105,12 +210,12 @@
         android:layout_marginTop="@dimen/tvInfo"
         android:fontFamily="@font/starjedi"
         android:gravity="center_horizontal"
-        android:text="@string/climate"
+        tools:text="@string/answer"
         android:textColor="@color/white"
         android:textSize="@dimen/textInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/tv_diameter" />
 
     <TextView
@@ -120,12 +225,12 @@
         android:layout_marginTop="@dimen/tvInfo"
         android:fontFamily="@font/starjedi"
         android:gravity="center_horizontal"
-        android:text="@string/diameter"
+        tools:text="@string/answer"
         android:textColor="@color/white"
         android:textSize="@dimen/textInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/tv_operiod" />
 
     <TextView
@@ -135,12 +240,12 @@
         android:layout_marginTop="@dimen/tvInfo"
         android:fontFamily="@font/starjedi"
         android:gravity="center_horizontal"
-        android:text="@string/operiod"
+        tools:text="@string/answer"
         android:textColor="@color/white"
         android:textSize="@dimen/textInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/tv_rperiod" />
 
     <TextView
@@ -150,12 +255,19 @@
         android:layout_marginTop="@dimen/tvInfo"
         android:fontFamily="@font/starjedi"
         android:gravity="center_horizontal"
-        android:text="@string/terrain"
+        tools:text="@string/answer"
         android:textColor="@color/white"
         android:textSize="@dimen/textInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/tv_climate" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="258dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

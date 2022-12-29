@@ -13,13 +13,14 @@
         android:fontFamily="@font/starjedi"
         android:gravity="center_horizontal"
         android:text="@string/nombre"
-        android:textColor="@color/yellow"
-        android:textSize="18sp"
+        android:textColor="@color/cyan"
+        android:textSize="@dimen/mainText"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/gl_element"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/tv_altura"
@@ -29,12 +30,13 @@
         android:gravity="center_horizontal"
         android:text="@string/altura"
         android:textColor="@color/yellow"
-        android:textSize="18sp"
+        android:textSize="@dimen/mainText"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/gl_element"
-        app:layout_constraintVertical_bias="0.33" />
+        app:layout_constraintVertical_bias="0.33"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/tv_birthyear"
@@ -44,12 +46,13 @@
         android:gravity="center_horizontal"
         android:text="@string/birthyear"
         android:textColor="@color/yellow"
-        android:textSize="18sp"
+        android:textSize="@dimen/mainText"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/gl_element"
-        app:layout_constraintVertical_bias="0.66" />
+        app:layout_constraintVertical_bias="0.66"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/tv_genre"
@@ -59,12 +62,13 @@
         android:gravity="center_horizontal"
         android:text="@string/g_nero"
         android:textColor="@color/yellow"
-        android:textSize="18sp"
+        android:textSize="@dimen/mainText"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/gl_element"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TextContrastCheck" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_element"

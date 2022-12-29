@@ -17,4 +17,5 @@
     <string name="g_nero">género</string>
     <string name="birthyear">año de nacimiento</string>
     <string name="name_movie">nombre pelicula</string>
+    <string name="answer">answer</string>
 </resources>

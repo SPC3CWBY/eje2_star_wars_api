@@ -39,16 +39,17 @@ class InfoPersonaje : AppCompatActivity() {
                 override fun onResponse(call: Call<InfoCharacter>, response: Response<InfoCharacter>) {
                     Log.d(Constants.LOGTAG, "Respuesta del servidor: $response")
                     Log.d(Constants.LOGTAG, "Datos: ${response.body().toString()}")
-                    binding.pb2.visibility = View.GONE
                     // DATA
                     with(binding){
                         tvPlanet.text = response.body()?.namePlanet
                         tvRperiod.text = response.body()?.rPeriod
                         tvOperiod.text = response.body()?.oPeriod
                         tvDiameter.text = response.body()?.diameter
+                        tvClimate.text = response.body()?.climate
                         tvTerrain.text = response.body()?.terrain
                         tvPopulation.text = response.body()?.population
                     }
+                    binding.pb2.visibility = View.GONE
                 }
 
                 override fun onFailure(call: Call<InfoCharacter>, t: Throwable) {
