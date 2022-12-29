@@ -2,45 +2,31 @@ package com.example.ejercicio2_starwarsapi.view.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
+import android.widget.BaseAdapter
 import com.example.ejercicio2_starwarsapi.databinding.ActivityListCharacterBinding
 import com.example.ejercicio2_starwarsapi.model.Character
-import com.example.ejercicio2_starwarsapi.view.activities.MainActivity
 import com.bumptech.glide.Glide
 
-class Adapter(private val context: Context,
-              private val character: Character
-               ): RecyclerView.Adapter<Adapter.ViewHolder>() {
+class Adapter(private val context: Context, val character: Character): BaseAdapter() {
+    override fun getCount(): Int = character.results.size
 
-    class ViewHolder (view: ActivityListCharacterBinding): RecyclerView.ViewHolder(view.root) {
-        val tvName = view.tvNameCharacter
-        val tvAltura= view.tvAltura
-        val tvBirthYear = view.tvBirthyear
-        val tvGenre = view.tvGenre
-        // IMG
-        val ivImg = view.ivCharacter
-    }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun getItem(p0: Int): Any = character.results[p0]
+
+    override fun getItemId(p0: Int): Long = character.results[p0].id!!
+
+    override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
         val binding = ActivityListCharacterBinding.inflate(LayoutInflater.from(context))
-        return ViewHolder(binding)
-    }
+        with(binding){
+            tvNameCharacter.text = character.results[p0].name!!.lowercase()
+            tvAltura.text = character.results[p0].height
+            tvBirthyear.text = character.results[p0].birthYear
+            tvGenre.text = character.results[p0].gender
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvName.text = character.results[position].name
-        holder.tvAltura.text = character.results[position].name
-        holder.tvBirthYear.text = character.results[position].name
-        holder.tvGenre.text = character.results[position].name
-
- /*       Glide.with(context)
-            .load(games[position].thumbnail)
-            .into(holder.ivThumbnail)
-*/
-        holder.itemView.setOnClickListener {
-            if(context is MainActivity) context.selectedCharacter(character.results[position])
+            // IMG
         }
+        return binding.root
     }
-
-    override fun getItemCount(): Int = character.results.size
 }

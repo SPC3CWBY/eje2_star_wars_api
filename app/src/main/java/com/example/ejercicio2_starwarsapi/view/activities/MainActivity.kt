@@ -7,9 +7,9 @@ import android.util.Log
 import android.view.View
 
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ejercicio2_starwarsapi.databinding.ActivityMainBinding
 import com.example.ejercicio2_starwarsapi.model.Character
+import com.example.ejercicio2_starwarsapi.model.CharacterImg
 import com.example.ejercicio2_starwarsapi.model.Results
 import com.example.ejercicio2_starwarsapi.model.StarWarsApi
 import com.example.ejercicio2_starwarsapi.view.util.Constants
@@ -34,18 +34,33 @@ class MainActivity : AppCompatActivity() {
             .getCharacters("people/")
         Log.d(Constants.LOGTAG, "Request: ${callCharacter.request()}")
 
+        val callCharacterImage = Constants.getRetrofitImgCharacter()
+            .create(StarWarsApi::class.java)
+            .getCharacterImg("all")
+
         CoroutineScope(Dispatchers.IO).launch {
-            /*val callCharacterImage = Constants.getRetrofitImgCharacter().create(StarWarsApi::class.java)
-                .getCharacterImg("all")*/
             callCharacter.enqueue(object : Callback<Character>{
                 override fun onResponse(call: Call<Character>, response: Response<Character>) {
-                    binding.pb1.visibility = View.GONE
                     Log.d(Constants.LOGTAG, "Respuesta del servidor: ${response.toString()}")
                     Log.d(Constants.LOGTAG, "Datos: ${response.body().toString()}")
+                    val datos = Character()
+                    var i: Long = 0
+                    for (x in response.body()!!.results){
+                        val characterTmp = Results(i, x.name,
+                            x.height,
+                            x.birthYear,
+                            x.gender,
+                            x.homeworld,x.films)
+                        datos.results.add(characterTmp)
+                        i++
+                    }
 
-
-                    binding.rvMenu.layoutManager = LinearLayoutManager(this@MainActivity)
-                    binding.rvMenu.adapter = Adapter(this@MainActivity, response.body()!!)
+                    val adapter = Adapter(this@MainActivity, datos)
+                    binding.lvMenu.adapter = adapter
+                    binding.lvMenu.setOnItemClickListener { parent, view, position, id ->
+                        selectedCharacter(datos.results.get(id.toInt()).films, datos.results.get(id.toInt()).homeworld)
+                    }
+                    binding.pb1.visibility = View.GONE
                 }
 
                 override fun onFailure(call: Call<Character>, t: Throwable) {
@@ -58,15 +73,24 @@ class MainActivity : AppCompatActivity() {
                 }
             })
 
+            callCharacterImage.enqueue(object: Callback<CharacterImg>{
+                override fun onResponse(
+                    call: Call<CharacterImg>,
+                    response: Response<CharacterImg>
+                ) {
+                    TODO("Not yet implemented")
+                }
+
+                override fun onFailure(call: Call<CharacterImg>, t: Throwable) {
+                    TODO("Not yet implemented")
+                }
+            })
         }
     }
 
-    fun selectedCharacter(results: Results) {
-        val planetID = results.homeworld!!
+    fun selectedCharacter(films: ArrayList<String>?, planet: String?) {
+        val planetID = planet!!
             .split("https",":","/","swapi",".","dev","api","planets")
-
-        val films = results.films
-
         val parameters = Bundle()
         parameters.apply{
             //Planeta

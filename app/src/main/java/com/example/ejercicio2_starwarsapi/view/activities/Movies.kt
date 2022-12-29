@@ -18,7 +18,6 @@ import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.create
 
 class Movies : AppCompatActivity() {
     private lateinit var binding: ActivityMoviesBinding
@@ -36,9 +35,28 @@ class Movies : AppCompatActivity() {
         val films  = intent.getSerializableExtra("films") as ArrayList<String>
         val filmsID = ArrayList<String>()
         for (x in films){
-            println("pepe")
             val tmp = x.split("https",":","/","swapi",".","dev","api","films")
-            filmsID.add(tmp.get(12))
+            val movTmp = tmp.get(12)
+            when(movTmp.toInt()){
+                1 -> {
+                    filmsID.add("4")
+                }
+                2 -> {
+                    filmsID.add("5")
+                }
+                3 -> {
+                    filmsID.add("6")
+                }
+                4 -> {
+                    filmsID.add("1")
+                }
+                5 -> {
+                    filmsID.add("2")
+                }
+                6 -> {
+                    filmsID.add("3")
+                }
+            }
         }
 
 
@@ -55,7 +73,10 @@ class Movies : AppCompatActivity() {
                         do {
                             num += 1
                         } while (x != response.body()!!.results.get(num).id.toString())
-                        val filmTmp = Movie(x.toLong(), response.body()!!.results.get(num).nameMovie,movImg.imgs.get(x.toInt()-1))
+                        val filmTmp = Movie(x.toLong(), response.body()!!
+                            .results.get(num)
+                            .nameMovie,movImg
+                            .imgs.get(x.toInt()-1))
                         datos.results.add(filmTmp)
                     }
 

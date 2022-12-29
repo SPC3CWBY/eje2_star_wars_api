@@ -13,7 +13,6 @@ object Constants {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-
     fun getRetrofitImgCharacter():Retrofit{
         return Retrofit.Builder()
             .baseUrl(BASE_IMG_CHARACTER)

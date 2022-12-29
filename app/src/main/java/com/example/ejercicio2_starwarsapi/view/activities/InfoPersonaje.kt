@@ -64,7 +64,7 @@ class InfoPersonaje : AppCompatActivity() {
     }
 
     fun OnClick(view: View) {
-        val films = getIntent().getExtras()!!.getStringArrayList("films");
+        val films  = intent.getSerializableExtra("films") as ArrayList<String>
 
         val intent = Intent(this@InfoPersonaje, Movies::class.java)
         val parameters = Bundle()
